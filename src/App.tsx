@@ -8,7 +8,7 @@ const App = () => {
     <section className="w-full h-auto bg-black relative">
       <Nav />
       <Hero />
-      {/* <PartnersUpper /> */}
+      <PartnersUpper />
       <Worlds />
     </section>
   );
