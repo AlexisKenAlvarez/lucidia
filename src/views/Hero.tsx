@@ -86,7 +86,7 @@ const Hero = () => {
 
                 <div className="w-full relative flex">
                     <h1 className="font-primary text-3xl md:text-5xl 2xl:text-[72px] max-w-[40rem] 2xl:leading-[5.5rem] font-semibold md:hidden block">AI DRIVEN GAMEFI GOVERNED BY YOU</h1>
-                    <img src="/hero/hero.webp" alt="Hero" className="object-cover top-0 md:w-auto h-[35vh] -mt-4 md:h-[70vh] mx-auto " />
+                    <img src="/hero/hero.webp" alt="Hero" className="object-cover top-0 md:w-auto h-[30vh] sm:h-[35vh] -mt-4 md:h-[70vh] mx-auto " />
                 </div>
 
             </div>
