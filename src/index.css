@@ -55,6 +55,17 @@
         0 var(--edge-size));
   }
 
+  .clipped3 {
+    --edge-size: 3em;
+    clip-path: polygon(
+        var(--edge-size) 0,
+        100% 0,
+        100% calc(100% - var(--edge-size)),
+        100% 100%,
+        0 100%,
+        0 100%);
+  }
+
   /* Hide the default scrollbar */
   ::-webkit-scrollbar {
     width: 0.5rem;

@@ -34,34 +34,34 @@ const How = () => {
     return (
         <section className="w-full min-h-screen relative py-10 sm:pt-28 pt-16">
 
-            <img src="/token.webp" alt="Coin" className="w-[7rem] absolute -top-7 -right-10 sm:hidden block" />
+            <img src="/tokentr.webp" alt="Coin" className="w-[5rem] absolute -top-7 right-0 sm:hidden block" />
 
             <div className="w-full h-full overflow-hidden px-5">
                 <div className="max-w-[1400px] w-full mx-auto flex gap-x-32 justify-center sm:flex-row flex-col">
 
-                    <div className="sm:w-[28%] text-white relative z-10">
+                    <div className="sm:w-[30%] text-white relative z-10">
                         <h1 className="font-semibold text-transparent text-2xl sm:ext-3xl md:text-4xl font-primary bg-clip-text bg-gradient-to-r from-white via-[#cab8ff] to-white sm:max-w-[12rem]">How to buy $LUCID?</h1>
                         <p className="font-primary font-medium mt-5 max-w-[22rem]">
                             Have more questions? Send them to our <a href="https://t.me/Lucidia_io" className="text-grn underline underline-offset-4">Telegram Chat</a> and the Community Managers will answer them in a matter of minutes!
                         </p>
 
                         <div className=" flex flex-col gap-y-4 mt-14 sm:mt-20">
-                            <button className="w-full md:w-[14rem] h-11 clipped2 bg-gradient-to-bl from-white to-[#0ED4FF] relative  font-bold flex items-center justify-center scale-x-[-1]">
+                            <button className="w-full md:w-[15rem] h-11 clipped2 bg-gradient-to-bl from-white to-[#0ED4FF] relative  font-bold flex items-center justify-center scale-x-[-1]">
                                 <div className="absolute bg-black w-[98%] h-[93%] left-0 top-0 right-0 bottom-0 m-auto clipped2">
 
                                 </div>
                                 <h1 className="font-secondary relative z-10 text-white font-[700] text-[12px] scale-x-[-1]">VIDEO INSTRUCTIONS</h1>
                             </button>
 
-                            <button className="w-full md:w-[14rem] h-11 clipped2 bg-gradient-to-bl from-white to-[#0ED4FF] relative  font-bold flex items-center justify-center scale-x-[-1]">
+                            <button className="w-full md:w-[15rem] h-11 clipped2 bg-gradient-to-bl from-white to-[#0ED4FF] relative  font-bold flex items-center justify-center scale-x-[-1]">
                                 <div className="absolute bg-black w-[98%] h-[93%] left-0 top-0 right-0 bottom-0 m-auto clipped2">
 
                                 </div>
-                                <h1 className="font-secondary relative z-10 text-white font-[700] text-[12px] scale-x-[-1]">BUY LUCID</h1>
+                                <h1 className="font-secondary relative z-10 text-white font-[700] text-[12px] scale-x-[-1]">BUY $LUCID</h1>
                             </button>
                         </div>
 
-                        <img src="/coins.webp" alt="Coins" className="mt-16 w-[39rem] sm:block hidden" />
+                        <img src="/coins.webp" alt="Coins" className="mt-16 w-[40rem] sm:block hidden" />
                         <img src="/token.webp" alt="Coin" className="w-[15.5rem] absolute -bottom-[15rem] -right-20 sm:hidden block" />
                     </div>
                     <div className="sm:w-[58.9%] flex flex-col gap-y-5 sm:mt-0 mt-[10rem]">

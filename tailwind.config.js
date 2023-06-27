@@ -17,7 +17,8 @@ export default {
         lavender: '#9786FF',
         grn: '#C0FF0E',
         lightpurple: '#e4d3fe',
-        gry: '#26272B'
+        gry: '#26272B',
+        prpl: '#7700FF'
       },
       boxShadow: {
         world: '0px -84px 147px -9px rgba(0,0,0,0.78) inset',
