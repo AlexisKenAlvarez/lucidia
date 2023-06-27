@@ -1,17 +1,17 @@
-import Nav from "./components/Nav";
-import Hero from "./views/Hero";
-import PartnersUpper from "./views/PartnersUpper";
-import Worlds from "./views/Worlds";
+import Landing from "./pages/Landing";
+import { Route, Routes } from "react-router-dom";
+import Team from "./pages/Team";
 
 const App = () => {
-  return (
-    <section className="w-full h-auto bg-black relative">
-      <Nav />
-      <Hero />
-      <PartnersUpper />
-      <Worlds />
-    </section>
-  );
+    return (
+        <section className="w-full h-auto bg-black relative">
+            <Routes>
+                <Route path="/" element={<Landing />} />
+                <Route path="/team" element={<Team />} />
+
+            </Routes>
+        </section>
+    );
 }
 
 export default App;

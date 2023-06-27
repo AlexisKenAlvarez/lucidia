@@ -13,7 +13,12 @@ export default {
       colors: {
         bl: '#0ED4FF',
         cyan: '#0ED4FF',
-        bg: '#010102'
+        bg: '#010102',
+        lavender: '#9786FF'
+      },
+      boxShadow: {
+        world: '0px -84px 147px -9px rgba(0,0,0,0.78) inset',
+        worldHover: '0px -99px 400px 51px rgba(193,255,0,0.97) inset'
       }
     },
   },
