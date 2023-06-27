@@ -15,7 +15,9 @@ export default {
         cyan: '#0ED4FF',
         bg: '#010102',
         lavender: '#9786FF',
-        grn: '#C0FF0E'
+        grn: '#C0FF0E',
+        lightpurple: '#e4d3fe',
+        gry: '#26272B'
       },
       boxShadow: {
         world: '0px -84px 147px -9px rgba(0,0,0,0.78) inset',

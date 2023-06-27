@@ -1,5 +1,6 @@
 import Nav from "../components/Nav";
 import Hero from "../views/Hero/Hero";
+import How from "../views/Hero/How";
 import PartnersUpper from "../views/Hero/PartnersUpper";
 import Worlds from "../views/Hero/Worlds";
 
@@ -11,6 +12,7 @@ const Landing = () => {
             <Hero />
             <PartnersUpper />
             <Worlds />
+            <How />
         </section>
     );
 }
