@@ -46,6 +46,7 @@ const Hero = () => {
             <video
                 autoPlay
                 muted
+                loop
                 src={MainVideo}
                 preload={'auto'}
                 onLoadedData={handleTrue}
