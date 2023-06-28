@@ -43,18 +43,22 @@ const Hero = () => {
                     </div>
 
                     <div className="flex gap-x-3 mt-10 md:flex-row flex-col gap-y-5">
-                        <button className=" w-full md:w-[9rem] h-14 clipped2 bg-cyan relative  font-bold flex items-center justify-center scale-x-[-1]">
-                            <div className="absolute bg-cyan w-[98%] h-[91%] left-0 top-0 right-0 bottom-0 m-auto clipped2"></div>
-                            <h1 className="font-secondary relative z-10 text-black font-[700] text-[12px] scale-x-[-1]">BUY $LUCID</h1>
-                        </button>
+                        <a href="" target='_blank' rel='noopener noreferrer' className="">
+                            <button className=" w-full md:w-[9rem] h-14 clipped2 bg-cyan relative  font-bold flex items-center justify-center scale-x-[-1]">
+                                <div className="absolute bg-cyan w-[98%] h-[91%] left-0 top-0 right-0 bottom-0 m-auto clipped2"></div>
+                                <h1 className="font-secondary relative z-10 text-black font-[700] text-[12px] scale-x-[-1]">BUY $LUCID</h1>
+                            </button>
+                        </a>
 
-                        <button className=" w-full md:w-[13rem] h-14 clipped2 bg-white relative  font-bold flex items-center justify-center scale-x-[-1]">
-                            <div className="absolute bg-[#2e194c] w-[98%] h-[96%] left-0 top-0 right-0 bottom-0 m-auto clipped2">
-                                <img src="/hero/trans.webp" alt="Herobg" className="w-full h-full object-cover absolute top-0 left-0" />
+                        <a href="" target='_blank' rel='noopener noreferrer' className="">
+                            <button className=" w-full md:w-[13rem] h-14 clipped2 bg-white relative  font-bold flex items-center justify-center scale-x-[-1] group">
+                                <div className="absolute bg-[#2e194c] w-[98%] h-[96%] left-0 top-0 right-0 bottom-0 m-auto clipped2 group-hover:bg-white transition-bg ease-in-out duration-300">
+                                    <img src="/hero/trans.webp" alt="Herobg" className="w-full h-full object-cover absolute top-0 left-0 group-hover:opacity-0 transition-opacity ease-in-out duration-300" />
 
-                            </div>
-                            <h1 className="font-secondary relative z-10 text-white font-[700] text-[12px] scale-x-[-1]">TOKEN ALLOCATION</h1>
-                        </button>
+                                </div>
+                                <h1 className="font-secondary relative z-10 text-white font-[700] text-[12px] scale-x-[-1] group-hover:text-black  transition-colors ease-in-out duration-300">TOKEN ALLOCATION</h1>
+                            </button>
+                        </a>
                     </div>
 
                     <div className="mt-20 flex md:items-center gap-x-8 md:flex-row flex-col gap-y-9">
