@@ -61,7 +61,7 @@ const Hero = () => {
                         </a>
                     </div>
 
-                    <div className="mt-20 flex md:items-center gap-x-8 md:flex-row flex-col gap-y-9">
+                    <div className="mt-20 flex md:items-start gap-x-8 md:flex-row flex-col gap-y-9">
                         <div className="">
                             <h1 className="font-primary font-medium">Join community of 100k+ Lucidians</h1>
                             <ul className="flex items-center gap-x-4 text-2xl mt-4">

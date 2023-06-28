@@ -182,15 +182,17 @@ const Nav = () => {
             </nav >
 
             <nav className="w-full h-auto px-5 xl:py-4 py-0  absolute top-0 left-0 z-20">
-                <img src="/hero/navline.webp" alt="NavLine" className="w-full absolute left-0 top-7 right-0 xl:block hidden pointer-events-none" />
+                <img src="/hero/navline.webp" alt="NavLine" className="w-full absolute left-0 2xl:top-7 top-24 right-0 xl:block hidden pointer-events-none" />
 
                 <div className="max-w-[1400px] w-full mx-auto flex justify-between items-center mt-5">
-                    <img src="/hero/logo.webp" alt="Logo" className="" />
+                    <a href="/" className="">
+                        <img src="/hero/logo.webp" alt="Logo" className="" />
+                    </a>
 
                     <ul className="font-secondary font-semibold text-sm uppercase items-center gap-x-12 text-white xl:flex hidden">
                         {navList.map((items, i) => {
                             return (
-                                <a href={items.slug === 'team' ? items.slug : `#${items.slug}`} className="">
+                                <a href={items.slug === 'team' ? items.slug : `#${items.slug}`} className="" key={i}>
                                     <li className="cursor-pointer" key={i}>{items.name}</li>
                                 </a>
 
