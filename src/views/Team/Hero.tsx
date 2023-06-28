@@ -196,7 +196,7 @@ const Hero = () => {
             <div className="w-full h-auto py-10 bg-grn mt-20 px-10">
                 <h1 className="text-[54px] text-black text-center font-secondary font-bold leading-tight">Want to join our team?</h1>
 
-                <a href="" target='_blank' rel='noopener noreferrer' className="">
+                <a href="https://forms.gle/3zJDupBPggQSKA8L7" target='_blank' rel='noopener noreferrer' className="">
                     <button className=" w-full md:w-[14.5rem] py-[0.7rem] clipped2 bg-black relative  font-bold flex items-center justify-center scale-x-[-1] mx-auto mt-3">
                         <div className="absolute bg-grn w-[98.5%] h-[92%] left-0 top-0 right-0 bottom-0 m-auto clipped2"></div>
                         <h1 className="font-secondary relative z-10 text-black font-[700] text-[14px] scale-x-[-1]">APPLY NOW &gt;</h1>
