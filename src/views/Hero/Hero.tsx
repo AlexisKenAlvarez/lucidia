@@ -3,7 +3,7 @@ import { PiTelegramLogoBold } from 'react-icons/pi'
 import { SiTwitter } from 'react-icons/si'
 import MainVideo from '../../../videos/hero.mp4'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+
 
 const Hero = () => {
 
