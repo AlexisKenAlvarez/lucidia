@@ -112,9 +112,15 @@ const Nav = () => {
     }
 
     const [navActive, setNav] = useState(false)
+    const [navDesktopActive, setNavDesktop] = useState(false)
+
 
     const handleNav = () => {
         setNav(curr => !curr)
+    }
+
+    const handleNavDesktop = () => {
+        setNavDesktop(curr => !curr)
     }
 
     return (
@@ -122,7 +128,7 @@ const Nav = () => {
             <nav className={`-full sm:w-[25rem] h-screen right-0 top-0 bottom-0 bg-black z-30 fixed transition-all  ease-in-out duration-500 ${navActive ? 'translate-x-0' : 'translate-x-full'}`}>
                 <div className="w-full h-[5rem] bg-prpl flex items-center justify-between px-4">
                     <img src="/hero/logo.webp" alt="Logo" className="" />
-                    <MdClose className="text-cyan text-5xl" onClick={handleNav} />
+                    <MdClose className="text-cyan text-5xl cursor-pointer" onClick={handleNav} />
                 </div>
 
                 <div className="overflow-auto max-h-[90%] w-full pb-20 top-0 right-0">
@@ -200,11 +206,62 @@ const Nav = () => {
                         })}
                     </ul>
 
-                    <div className="flex items-center gap-x-8">
-                        <button className="flex flex-col items-end gap-y-3" onClick={handleNav}>
+                    <div className="flex items-center gap-x-8 relative">
+                        <button className="flex-col items-end gap-y-3 md:hidden flex" onClick={handleNav}>
                             <div className="w-8 h-[3px] bg-white"></div>
                             <div className="w-6 h-[3px] bg-white"></div>
                         </button>
+
+                        <button className=" flex-col items-end gap-y-3 md:flex hidden" onClick={handleNavDesktop}>
+                            <div className="w-8 h-[3px] bg-white"></div>
+                            <div className="w-6 h-[3px] bg-white"></div>
+                        </button>
+
+                        <div className={`w-[16rem] h-[23rem] clipped bg-bl absolute z-10 top-[3.2rem] transition-height ease-in-out duration-300  -left-[14rem] ${navDesktopActive ? 'max-h-[23rem]' : 'max-h-0'}`}>
+                            <div className="absolute bg-black w-[98%] h-[99%] left-0 top-0 right-0 bottom-0 m-auto clipped">
+                                <div className="overflow-x-hidden max-h-[100%] w-full top-0 right-0">
+                                    <ul className="font-secondary font-semibold uppercase p-4 px-7 w-full text-sm text-white">
+                                        {navMobile.slice(4, 9).map((items, i) => {
+                                            return (
+                                                items.type === 'external' ? <a href="" target="_blank" rel="noopener noreferrer" className="w-full h-full" key={i}>
+                                                    <motion.li initial={{ x: 100, opacity: 0 }} animate={navDesktopActive ? { x: 0, opacity: 1 } : {}} transition={{ duration: 0.7, delay: 0.5 * (i * 0.1), ease: [0.16, 0.77, 0.47, .97] }} className={`border-b-[1px] border-white/10 py-5 `}>
+                                                        {items.name}
+                                                    </motion.li>
+                                                </a> : items.type === 'internal' ? <a href={`#${items.slug}`} className="w-full h-full" key={i}>
+                                                    <motion.li initial={{ x: 100, opacity: 0 }} animate={navDesktopActive ? { x: 0, opacity: 1 } : {}} transition={{ duration: 0.7, delay: 0.5 * (i * 0.1), ease: [0.16, 0.77, 0.47, .97] }} className={`border-b-[1px] border-white/10 py-5`}>
+                                                        {items.name}
+                                                    </motion.li>
+                                                </a> :
+                                                    items.name === 'audit' ?
+                                                        <motion.li initial={{ x: 100, opacity: 0 }} animate={navDesktopActive ? { x: 0, opacity: 1 } : {}} transition={{ duration: 0.7, delay: 0.5 * (i * 0.1), ease: [0.16, 0.77, 0.47, .97] }} className={`border-b-[1px] border-white/10 py-5 group`} onClick={handleAudit} key={i}>
+                                                            <div className="w-full flex justify-between items-center cursor-pointer group-hover:text-cyan">
+                                                                <p className="">
+                                                                    {items.name}
+                                                                </p>
+                                                                <MdKeyboardArrowUp className={`text-2xl transition-all ease-in-out duration-300  ${audit ? 'rotate-0' : 'rotate-180'}`} />
+                                                            </div>
+                                                            <div className={`text-footergry  flex flex-col gap-y-2  overflow-hidden transition-all ease-in-out duration-300 ${audit ? 'max-h-[5rem] mt-4' : 'max-h-0 mt-0'} `}>
+                                                                {items.sub?.map((items, i) => {
+                                                                    return (
+                                                                        <a href={items.link} target="_blank" rel='noreferrer noopener' className="hover:text-white" key={i}>
+                                                                            {items.title}
+
+                                                                        </a>
+                                                                    )
+                                                                })}
+                                                            </div>
+                                                        </motion.li>
+                                                        : null
+                                            )
+                                        })}
+                                    </ul>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
 
                         <button className="w-[13rem] h-9 clipped bg-bl relative  font-bold items-center justify-center md:flex hidden group">
                             <div className="absolute bg-[#5e38b2] w-[98%] h-[91%] left-0 top-0 right-0 bottom-0 m-auto clipped group-hover:bg-bl transition-bg ease-in-out duration-300"></div>
