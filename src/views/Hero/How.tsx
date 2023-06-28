@@ -40,7 +40,7 @@ const How = () => {
                 <div className="max-w-[1400px] w-full mx-auto flex gap-x-32 justify-center sm:flex-row flex-col">
 
                     <div className="sm:w-[30%] text-white relative z-10">
-                        <h1 className="font-semibold text-transparent text-2xl sm:ext-3xl md:text-4xl font-primary bg-clip-text bg-gradient-to-r from-white via-[#cab8ff] to-white sm:max-w-[12rem]">How to buy $LUCID?</h1>
+                        <h1 className="font-medium text-transparent text-2xl sm:ext-3xl md:text-4xl font-primary bg-clip-text bg-gradient-to-r from-white via-[#cab8ff] to-white sm:max-w-[12rem]">How to buy $LUCID?</h1>
                         <p className="font-primary font-medium mt-5 max-w-[22rem]">
                             Have more questions? Send them to our <a href="https://t.me/Lucidia_io" className="text-grn underline underline-offset-4">Telegram Chat</a> and the Community Managers will answer them in a matter of minutes!
                         </p>

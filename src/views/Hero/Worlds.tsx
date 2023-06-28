@@ -70,8 +70,8 @@ const Worlds = () => {
         <section className="w-full h-auto min-h-screen bg-bg relative">
 
             <div className="px-5 py-5">
-                <div className="max-w-[1400px] w-full mx-auto h-auto">
-                    <h1 className="font-semibold text-transparent text-2xl sm:ext-3xl md:text-4xl font-primary bg-clip-text bg-gradient-to-r from-[#e4d3fe] via-white to-lavender w-fit">Free2Play Open Worlds</h1>
+                <div className="max-w-[1400px] w-full mx-auto h-auto sm:mt-11">
+                    <h1 className="font-medium text-transparent text-2xl sm:text-3xl md:text-4xl font-primary bg-clip-text bg-gradient-to-r from-[#e4d3fe] via-white to-lavender w-fit">Free2Play Open Worlds</h1>
 
                     <div className="flex flex-wrap gap-3 mt-12">
                         {worldList.map((items, i) => {

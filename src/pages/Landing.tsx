@@ -3,6 +3,7 @@ import Hero from "../views/Hero/Hero";
 import How from "../views/Hero/How";
 import Partners from "../views/Hero/Partners";
 import PartnersUpper from "../views/Hero/PartnersUpper";
+import Tokens from "../views/Hero/Tokens";
 import Worlds from "../views/Hero/Worlds";
 
 
@@ -15,6 +16,7 @@ const Landing = () => {
             <Worlds />
             <How />
             <Partners />
+            <Tokens />
         </section>
     );
 }
