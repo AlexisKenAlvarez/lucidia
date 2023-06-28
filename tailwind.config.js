@@ -23,7 +23,8 @@ export default {
       },
       boxShadow: {
         world: '0px -84px 147px -9px rgba(0,0,0,0.78) inset',
-        worldHover: '0px -99px 400px 51px rgba(193,255,0,0.97) inset'
+        worldHover: '0px -99px 400px 51px rgba(193,255,0,0.97) inset',
+        tokenHover: '-115px -4px 181px -34px rgba(255,255,255,0.75) inset'
       }
     },
   },

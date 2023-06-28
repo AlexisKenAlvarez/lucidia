@@ -89,5 +89,9 @@
     background: #999;
   }
 
+  html, body {
+    scroll-behavior: smooth;
+  }
+
 
 }

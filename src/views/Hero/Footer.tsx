@@ -51,6 +51,10 @@ const Footer = () => {
         'ANTI-MONEY LAUNDERING POLICY'
     ]
 
+    const handleScrollTop = () => {
+        window.scrollTo(0, 0)
+    }
+
     return (
         <footer className="w-full h-auto min-h-screen relative pb-16">
             <div className="max-w-[1400px] mx-auto w-full text-white mt-28">
@@ -146,10 +150,10 @@ const Footer = () => {
                     </p>
                 </div>
 
-                <button className="">
+                <button className="" onClick={handleScrollTop}>
                     <img src="/iconup.webp" alt="Icon" className="w-8 h-8" />
                 </button>
-                
+
             </div>
 
 
