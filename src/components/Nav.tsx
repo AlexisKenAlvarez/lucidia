@@ -189,7 +189,7 @@ const Nav = () => {
 
             <nav className="w-full h-auto px-5 xl:py-4 py-0  absolute top-0 left-0 z-20">
                 <img src="/hero/navline.webp" alt="NavLine" className="w-full absolute left-0 2xl:block top-7 right-0 hidden pointer-events-none" />
-    
+
 
                 <div className="max-w-[1400px] w-full mx-auto flex justify-between items-center mt-5">
                     <a href="/" className="">
@@ -213,9 +213,9 @@ const Nav = () => {
                             <div className="w-6 h-[3px] bg-white"></div>
                         </button>
 
-                        <button className=" flex-col items-end gap-y-3 md:flex hidden" onClick={handleNavDesktop}>
-                            <div className="w-8 h-[3px] bg-white"></div>
-                            <div className="w-6 h-[3px] bg-white"></div>
+                        <button className={` flex-col items-end gap-y-3 md:flex hidden transition-all ease-in-out duration-300 ${navDesktopActive ? 'rotate-[360deg]' : 'rotate-0'}`} onClick={handleNavDesktop}>
+                            <div className={` transition-all ease-in-out duration-300 ${navDesktopActive ? 'bg-cyan rotate-[-45deg] w-8 translate-y-[9px] h-[3px]' : 'w-8 h-[3px] bg-white'}`}></div>
+                            <div className={` transition-all ease-in-out duration-300  ${navDesktopActive ? 'bg-cyan rotate-[45deg] w-8 h-[3px] -translate-y-[6px]' : 'w-6 h-[3px] bg-white'}`}></div>
                         </button>
 
                         <div className={`w-[16rem] h-[23rem] clipped bg-bl absolute z-10 top-[3.2rem] transition-height ease-in-out duration-300  -left-[14rem] ${navDesktopActive ? 'max-h-[23rem]' : 'max-h-0'}`}>
