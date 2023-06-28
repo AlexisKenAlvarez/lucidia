@@ -67,7 +67,7 @@ const Hero = () => {
                             <ul className="flex items-center gap-x-4 text-2xl mt-4">
                                 {community.map((items, i) => {
                                     return (
-                                        <a href="" rel="noopener noreferrer" className="opacity-40" key={i}>
+                                        <a href="" rel="noopener noreferrer" className="sm:opacity-40" key={i}>
                                             {items.icon}
                                         </a>
                                     )

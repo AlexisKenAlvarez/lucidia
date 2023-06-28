@@ -1,3 +1,5 @@
+import LeftRight from "../../anim/LeftRight";
+
 const Partners = () => {
 
     const partners = [
@@ -27,7 +29,11 @@ const Partners = () => {
 
                 <div className="w-[17rem] h-auto clipped3 bg-prpl relative z-10 items-center justify-center scale-x-[-1] text-white mt-2 sm:flex hidden">
                     <div className="w-full h-full scale-x-[-1]">
-                        <h1 className="font-semibold font-primary mt-3 ml-6 text-[22px]">OUR PARTNERS</h1>
+                        <LeftRight>
+
+                            <h1 className="font-semibold font-primary mt-3 ml-6 text-[22px]">OUR PARTNERS</h1>
+                        </LeftRight>
+
                     </div>
                 </div>
 
@@ -35,6 +41,7 @@ const Partners = () => {
 
                     <div className="w-full h-full scale-x-[-1]">
                         <h1 className="font-semibold font-primary ml-6 text-[22px] text-center sm:hidden block text-white mt-7">OUR PARTNERS</h1>
+
 
                         <div className="flex flex-wrap gap-x-[8rem] gap-y-[2.5rem] items-center justify-center px-5 py-9">
                             {partners.map((items, i) => {

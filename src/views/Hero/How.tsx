@@ -45,7 +45,21 @@ const How = () => {
                             Have more questions? Send them to our <a href="https://t.me/Lucidia_io" className="text-grn underline underline-offset-4">Telegram Chat</a> and the Community Managers will answer them in a matter of minutes!
                         </p>
 
+
                         <div className=" flex flex-col gap-y-4 mt-14 sm:mt-20">
+                            <a href="" target='_blank' rel="noopener noreferrer" className="">
+                                <button className="w-full md:w-[15rem] h-11 clipped2 bg-gradient-to-bl from-white to-[#0ED4FF] relative group font-bold flex items-center justify-center scale-x-[-1]">
+                                    <div className="absolute bg-black w-[98%] h-[93%] left-0 top-0 right-0 bottom-0 m-auto clipped2">
+
+                                    </div>
+
+                                    <div className="absolute bg-gradient-to-bl from-white to-[#0ED4FF]  w-full h-full left-0 top-0 right-0 bottom-0 m-auto clipped2 opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
+
+                                    </div>
+                                    <h1 className="font-secondary relative z-10 text-white font-[700] text-[12px] scale-x-[-1] group-hover:text-black transition-colors ease-in-out duration-300">TOKEN ALLOCATION</h1>
+                                </button>
+                            </a>
+
                             <a href="" target='_blank' rel="noopener noreferrer" className="">
                                 <button className="w-full md:w-[15rem] h-11 clipped2 bg-gradient-to-bl from-white to-[#0ED4FF] relative group font-bold flex items-center justify-center scale-x-[-1]">
                                     <div className="absolute bg-black w-[98%] h-[93%] left-0 top-0 right-0 bottom-0 m-auto clipped2">
