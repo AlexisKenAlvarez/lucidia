@@ -6,7 +6,7 @@ const Hero = () => {
         {
             name: 'Adel Khatib',
             position: 'CHIEF EXECUTIVE OFFICER',
-            link: '',
+            link: 'https://www.linkedin.com/in/adel-khatib-b2b136180/',
             desc: [
                 'Samsung Mena Partner (6 yrs)',
                 'Electric fleet partner with Uber (2 yrs)',
@@ -17,7 +17,7 @@ const Hero = () => {
         {
             name: 'Feras Nimer',
             position: 'CHIEF OPERATION OFFICER',
-            link: '',
+            link: 'https://www.linkedin.com/in/feras-nimer-691a3258/',
             desc: [
                 'Business transformation at EY (5 yrs)',
                 'Project management (6 yrs)',
@@ -28,7 +28,7 @@ const Hero = () => {
         {
             name: 'Ahmad Assaf',
             position: 'CHIEF TECHNOLOGY OFFICER',
-            link: '',
+            link: 'https://www.linkedin.com/in/ahmadassaf/',
             desc: [
                 'AI & data expert (14 yrs)',
                 'Crypto/tech enthusiast (5 yrs)',
@@ -39,7 +39,7 @@ const Hero = () => {
         {
             name: 'Den Smolonski',
             position: 'SENIOR BLOCKCHAIN DEVELOPER',
-            link: '',
+            link: 'https://www.linkedin.com/in/den-smolonski-648051100/',
             desc: [
                 'Full Stack Developer (8 yrs)',
                 'DeFi Developer',
@@ -50,7 +50,7 @@ const Hero = () => {
         {
             name: 'Jahongir Erkinov',
             position: 'SENIOR DEVELOPER',
-            link: '',
+            link: 'https://www.linkedin.com/in/jakhongirerkinov/',
             desc: [
                 'Unreal Engine developer (6 yrs)',
                 'Unity Engine developer (4 yrs)',
@@ -61,7 +61,7 @@ const Hero = () => {
         {
             name: 'Matsushima Goro',
             position: 'BLOCKCHAIN DEVELOPER',
-            link: '',
+            link: 'https://www.linkedin.com/in/matsushima-goro-bb6b2326b/',
             desc: [
                 'Blockchain expert (4 yrs)',
                 'Rust specialist (2 yrs)',
@@ -72,7 +72,7 @@ const Hero = () => {
         {
             name: 'Oskar Krzak',
             position: 'BUSINESS DEVELOPMENT MANAGER',
-            link: '',
+            link: 'https://www.linkedin.com/in/krzakoskar/',
             desc: [
                 'Product Manager (7 yrs)',
                 'Blockchain industry (6 yrs)',
@@ -82,7 +82,7 @@ const Hero = () => {
         {
             name: 'Marius Dommersnes',
             position: 'CHIEF MARKETING OFFICER',
-            link: '',
+            link: 'https://www.linkedin.com/in/marius-dommersnes-455a30177/',
             desc: [
                 'Blockchain industry (3 yrs)',
                 'Presales & IDO (2 yrs)',
@@ -92,7 +92,7 @@ const Hero = () => {
         {
             name: 'Victoria Iskiyaeva',
             position: 'CHIEF MARKETING OFFICER',
-            link: '',
+            link: 'https://www.linkedin.com/in/victoria-iskiyaeva-851359213/',
             desc: [
                 'Web3 Marketing (3 yrs)',
                 'Social Media Management (4 yrs)',
@@ -102,7 +102,7 @@ const Hero = () => {
         {
             name: 'Rula Madi',
             position: 'HEAD OF LEGAL',
-            link: '',
+            link: 'https://www.linkedin.com/in/rolamadi/',
             desc: [
                 'Corporate & tech/IP law (20 yrs)',
                 'Senior management adviser',
@@ -112,7 +112,7 @@ const Hero = () => {
         {
             name: 'Al Rizqi',
             position: 'ASIA & CIS COMMUNITY MANAGER',
-            link: '',
+            link: 'https://www.linkedin.com/in/al-rizqi/',
             desc: [
                 'Community Manager (2 yrs)',
                 'Project Management (3 yrs)',
@@ -122,7 +122,7 @@ const Hero = () => {
         {
             name: 'Sander Kloet',
             position: 'EMEA & NA COMMUNITY MANAGER',
-            link: '',
+            link: 'https://www.linkedin.com/in/sander-kloet-278b68278/',
             desc: [
                 'Community Manager (4 yrs)',
                 'Social Media Manager (4 yrs)',

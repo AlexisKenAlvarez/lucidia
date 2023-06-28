@@ -10,21 +10,29 @@ const Hero = () => {
     const community = [
 
         {
-            link: '',
+            link: 'https://t.me/Lucidia_io',
             icon: <PiTelegramLogoBold />
         },
         {
-            link: '',
+            link: 'https://discord.com/invite/lucidia',
             icon: <BsDiscord />
         },
         {
-            link: '',
+            link: 'https://twitter.com/lucidia_io',
             icon: <SiTwitter />
         },
     ]
 
     const audited = [
-        'inter', 'rev',
+        {
+            name: 'inter',
+            link: 'https://www.interfi.network/audits'
+        },
+        {
+            name: 'rev',
+            link: 'https://www.revoluzion.io/audit '
+        },
+
     ]
 
     const [trueLoading, setTrueLoading] = useState(true)
@@ -72,14 +80,14 @@ const Hero = () => {
                     </div>
 
                     <div className="flex gap-x-3 mt-10 md:flex-row flex-col gap-y-5">
-                        <a href="" target='_blank' rel='noopener noreferrer' className="">
+                        <a href="$LUCID - https://finance.lucidia.io/" target='_blank' rel='noopener noreferrer' className="">
                             <button className=" w-full md:w-[9rem] h-14 clipped2  relative  font-bold flex items-center justify-center scale-x-[-1]">
                                 <div className="absolute bg-cyan w-full h-full left-0 top-0 right-0 bottom-0 m-auto clipped2 bg-gradient-to-bl from-white to-[#0ED4FF]"></div>
                                 <h1 className="font-secondary relative z-10 text-black font-[700] text-[12px] scale-x-[-1]">BUY $LUCID</h1>
                             </button>
                         </a>
 
-                        <a href="" target='_blank' rel='noopener noreferrer' className="">
+                        <a href="https://drive.google.com/file/d/1pT08KRpvPwnQcxwyGktETCeH8HtZi08v/view" target='_blank' rel='noopener noreferrer' className="">
                             <button className=" w-full md:w-[13rem] h-14 clipped2 bg-white relative  font-bold flex items-center justify-center scale-x-[-1] group">
                                 <div className="absolute bg-[#2e194c] w-[98%] h-[96%] left-0 top-0 right-0 bottom-0 m-auto clipped2 group-hover:bg-white transition-bg ease-in-out duration-300">
                                     <img src="/hero/trans.webp" alt="Herobg" className="w-full h-full object-cover absolute top-0 left-0 group-hover:opacity-0 transition-opacity ease-in-out duration-300" />
@@ -96,7 +104,7 @@ const Hero = () => {
                             <ul className="flex items-center gap-x-4 text-2xl mt-4">
                                 {community.map((items, i) => {
                                     return (
-                                        <a href="" rel="noopener noreferrer" className="sm:opacity-40" key={i}>
+                                        <a href={items.link} target="_blank" rel="noopener noreferrer" className="sm:opacity-40 hover:opacity-100" key={i}>
                                             {items.icon}
                                         </a>
                                     )
@@ -109,7 +117,9 @@ const Hero = () => {
                             <ul className="flex items-center gap-x-7 text-2xl mt-4">
                                 {audited.map((items, i) => {
                                     return (
-                                        <img src={`/hero/${items}.webp`} alt="items" className="" key={i} />
+                                        <a href="" target="_blank" rel="noopener noreferrer" className="">
+                                            <img src={`/hero/${items.name}.webp`} alt={items.name} className="" key={i} />
+                                        </a>
                                     )
                                 })}
                             </ul>

@@ -10,45 +10,66 @@ const Footer = () => {
 
     const icons = [
         {
-            link: '',
+            link: 'https://t.me/Lucidia_io',
             icon: <LiaTelegramPlane />
         },
         {
-            link: '',
+            link: 'https://discord.gg/lucidia',
             icon: <RxDiscordLogo />
         },
         {
-            link: '',
+            link: 'https://twitter.com/lucidia_io',
             icon: <TfiTwitter />
         },
         {
-            link: '',
+            link: 'https://youtube.com/@lucidia_official',
             icon: <AiOutlineYoutube />
         },
         {
-            link: '',
+            link: 'https://www.reddit.com/r/LucidiaMetaverse/',
             icon: <FaRedditAlien />
         },
         {
-            link: '',
+            link: 'https://instagram.com/lucidia_official',
             icon: <FaInstagram />
         },
         {
-            link: '',
+            link: 'https://www.tiktok.com/@lucidia.io',
             icon: <RiTiktokLine />
         },
     ]
 
     const general = [
-        'PRIVACY POLICY',
-        'TERMS AND CONDITIONS',
-        'TOKEN SALE TERMS AND CONDITIONS'
+        {
+            title: 'PRIVACY POLICY',
+            link: 'https://lucidia.io/privacy-policy/'
+        },
+        {
+            title: 'TERMS AND CONDITIONS',
+            link: 'https://lucidia.io/terms-and-conditions/'
+        },
+        {
+            title: 'TOKEN SALE TERMS AND CONDITIONS',
+            link: 'https://lucidia.io/token-sale-terms-and-conditions/'
+        },
+        
     ]
 
     const company = [
-        'contact us',
-        'FREQUENTLY ASKED QUESTIONS',
-        'ANTI-MONEY LAUNDERING POLICY'
+
+        {
+            title: 'contact us',
+            link: 'contact@lucidia.io'
+        },
+        {
+            title: 'FREQUENTLY ASKED QUESTIONS',
+            link: ''
+        },
+        {
+            title: 'ANTI-MONEY LAUNDERING POLICY',
+            link: 'https://lucidia.io/anti-money-laundering-policy/'
+        },
+        
     ]
 
     const handleScrollTop = () => {
@@ -110,8 +131,8 @@ const Footer = () => {
                                         <div className={`w-7 h-3 bg-grn absolute -right-9 top-0 bottom-0 my-auto flex items-center justify-center ${i === 0 ? 'block' : 'hidden'}`}>
                                             <h5 className="text-[8px] font-primary font-bold text-center text-black mt-[2px]">NEW</h5>
                                         </div>
-                                        <a href="" className="">
-                                            {items}
+                                        <a href={items.link} target="_blank" rel="noopener noreferrer" className="">
+                                            {items.title}
                                         </a>
                                     </li>
                                 )
@@ -128,8 +149,8 @@ const Footer = () => {
                                         <div className={`w-7 h-3 bg-cyan absolute -right-9 top-0 bottom-0 my-auto flex items-center justify-center ${i === 2 ? 'block' : 'hidden'}`}>
                                             <h5 className="text-[8px] font-primary font-bold text-center text-black mt-[2px]">NEW</h5>
                                         </div>
-                                        <a href="" className="">
-                                            {items}
+                                        <a href={items.title === 'contact us' ? 'mailto:contact@lucidia.io' : items.link} target="_blank" rel="noopener noreferrer" className="">
+                                            {items.title}
                                         </a>
                                     </li>
                                 )

@@ -12,19 +12,26 @@ const Nav = () => {
 
         {
             name: 'pitchdeck',
-            slug: 'pitchdeck'
+            slug: 'pitchdeck',
+            type: 'external',
+            link: 'https://drive.google.com/file/d/1n1ddGOA5tTXVhK6zu7962QLSJBUev0aA/view'
         },
         {
             name: 'roadmap',
-            slug: 'roadmap'
+            slug: 'roadmap',
+            type: 'external',
+            link:'https://drive.google.com/file/d/1j_jqFpZlgmppz9CElg4KeSnmoR4uneqp/view'
         },
         {
             name: 'our team',
-            slug: 'team'
+            slug: 'team',
+            type: 'internal',
         },
         {
             name: 'gameplay',
-            slug: 'gameplay'
+            slug: 'gameplay',
+            type: 'external',
+            link:'https://share.arcware.cloud/33034e19-bac7-4d3b-910b-e2c45c2eccd8'
         },
     ]
 
@@ -32,12 +39,14 @@ const Nav = () => {
         {
             name: 'pitchdeck',
             slug: 'pitchdeck',
-            type: 'external'
+            type: 'external',
+            link: 'https://drive.google.com/file/d/1n1ddGOA5tTXVhK6zu7962QLSJBUev0aA/view'
         },
         {
             name: 'roadmap',
             slug: 'roadmap',
-            type: 'internal'
+            type: 'external',
+            linl: 'https://drive.google.com/file/d/1j_jqFpZlgmppz9CElg4KeSnmoR4uneqp/view'
         },
         {
             name: 'our team',
@@ -55,15 +64,15 @@ const Nav = () => {
             sub: [
                 {
                     title: 'interfi',
-                    link: ''
+                    link: 'https://github.com/interfinetwork/project-delivery-data/blob/main/Lucidia/Lucidia_AuditReport_InterFi.pdf'
                 },
                 {
                     title: 'revoluzion eth',
-                    link: ''
+                    link: 'https://revoluzion.app/audits/presaleeth'
                 },
                 {
                     title: 'revoluzion bsc',
-                    link: ''
+                    link: 'https://revoluzion.app/audits/presalebsc'
                 },
 
             ]
@@ -71,7 +80,8 @@ const Nav = () => {
         {
             name: 'gameplay',
             slug: 'gameplay',
-            type: 'internal'
+            type: 'external',
+            link: 'https://share.arcware.cloud/33034e19-bac7-4d3b-910b-e2c45c2eccd8'
         },
         {
             name: 'faq',
@@ -125,7 +135,7 @@ const Nav = () => {
                     <ul className="text-white font-secondary font-semibold uppercase px-7 w-full py-12 text-sm">
                         {navMobile.map((items, i) => {
                             return (
-                                items.type === 'external' ? <a href="" target="_blank" rel="noopener noreferrer" className="w-full h-full" key={i}>
+                                items.type === 'external' ? <a href={items.link} target="_blank" rel="noopener noreferrer" className="w-full h-full" key={i}>
                                     <motion.li initial={{ x: 100, opacity: 0 }} animate={navActive ? { x: 0, opacity: 1 } : {}} transition={{ duration: 0.7, delay: 0.5 * (i * 0.1), ease: [0.16, 0.77, 0.47, .97] }} className={`border-t-[1px] border-white/10 py-5 ${items.name === 'faq' ? 'border-b-[1px]' : ''} `}>
                                         {items.name}
                                     </motion.li>
@@ -189,9 +199,13 @@ const Nav = () => {
                     <ul className="font-secondary font-semibold text-sm uppercase items-center gap-x-12 text-white xl:flex hidden">
                         {navList.map((items, i) => {
                             return (
-                                <a href={items.slug === 'team' ? items.slug : `#${items.slug}`} className="" key={i}>
+                                items.type === 'external' ? 
+                                <a href={items.link} target='_blank' rel="noopener noreferrer" className="" key={i}>
                                     <li className="cursor-pointer" key={i}>{items.name}</li>
-                                </a>
+                                </a> : 
+                                <a href={items.slug} className="" key={i}>
+                                <li className="cursor-pointer" key={i}>{items.name}</li>
+                            </a>
 
                             )
                         })}
@@ -214,7 +228,7 @@ const Nav = () => {
                                     <ul className="font-secondary font-semibold uppercase p-4 px-7 w-full text-sm text-white">
                                         {navMobile.slice(3, 9).map((items, i) => {
                                             return (
-                                                items.type === 'external' ? <a href="" target="_blank" rel="noopener noreferrer" className="w-full h-full" key={i}>
+                                                items.type === 'external' ? <a href={items.link} target="_blank" rel="noopener noreferrer" className="w-full h-full" key={i}>
                                                     <motion.li initial={{ x: 100, opacity: 0 }} animate={navDesktopActive ? { x: 0, opacity: 1 } : {}} transition={{ duration: 0.7, delay: 0.5 * (i * 0.1), ease: [0.16, 0.77, 0.47, .97] }} className={`border-b-[1px] border-white/10 py-5 `}>
                                                         {items.name}
                                                     </motion.li>
@@ -253,11 +267,12 @@ const Nav = () => {
 
                         </div>
 
-
-                        <button className="w-[13rem] h-9 clipped bg-bl relative  font-bold items-center justify-center md:flex hidden group">
-                            <div className="absolute bg-[#5e38b2] w-[98%] h-[91%] left-0 top-0 right-0 bottom-0 m-auto clipped group-hover:bg-bl transition-bg ease-in-out duration-300"></div>
-                            <h1 className="font-secondary relative z-10 text-bl text-[12px] group-hover:text-black transition-color ease-in-out duration-300">MEET THE COMMUNITY</h1>
-                        </button>
+                        <a href="https://t.me/Lucidia_io" target="_blank" rel="noopener noreferrer" className="">
+                            <button className="w-[13rem] h-9 clipped bg-bl relative  font-bold items-center justify-center md:flex hidden group">
+                                <div className="absolute bg-[#5e38b2] w-[98%] h-[91%] left-0 top-0 right-0 bottom-0 m-auto clipped group-hover:bg-bl transition-bg ease-in-out duration-300"></div>
+                                <h1 className="font-secondary relative z-10 text-bl text-[12px] group-hover:text-black transition-color ease-in-out duration-300">MEET THE COMMUNITY</h1>
+                            </button>
+                        </a>
                     </div>
 
                 </div>
