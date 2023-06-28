@@ -1,8 +1,12 @@
+import Nav from "../components/Nav";
+import Hero from "../views/Team/Hero";
+
 const Team = () => {
     return (
-        <div>
-            Team
-        </div>
+        <section className="w-full h-auto overflow-hidden bg-bg">
+            <Nav />
+            <Hero />
+        </section>
     );
 }
 

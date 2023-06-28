@@ -20,7 +20,7 @@ const Nav = () => {
         },
         {
             name: 'our team',
-            slug: 'ourteam'
+            slug: 'team'
         },
         {
             name: 'gameplay',
@@ -190,7 +190,10 @@ const Nav = () => {
                     <ul className="font-secondary font-semibold text-sm uppercase items-center gap-x-12 text-white xl:flex hidden">
                         {navList.map((items, i) => {
                             return (
-                                <li className="cursor-pointer" key={i}>{items.name}</li>
+                                <a href={items.slug === 'team' ? items.slug : `#${items.slug}`} className="">
+                                    <li className="cursor-pointer" key={i}>{items.name}</li>
+                                </a>
+
                             )
                         })}
                     </ul>
