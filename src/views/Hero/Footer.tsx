@@ -60,7 +60,7 @@ const Footer = () => {
 
             <div className="max-w-[1400px] mx-auto w-full text-white sm:mt-28 mt-10 px-5 text-left sm:text-center">
                 <div className="mt-10">
-                    <h1 className="sm:text-[46px] text-[32px] font-semibold font-primary bg-clip-text bg-gradient-to-r w-fit sm:mx-auto  from-white via-white to-[#c4f4fe] text-transparent">
+                    <h1 className="sm:text-[46px] text-[32px] font-bold leading-tight font-primary bg-clip-text bg-gradient-to-r w-fit sm:mx-auto  from-white via-white to-[#c4f4fe] text-transparent">
                         Join community of 100k+ Lucidians
                     </h1>
                     <p className="font-medium font-primary text-footergry text-[15px] sm:text-[22px] mt-2 sm:mt-0">For more details about our progress and workflow be sure to follow</p>
@@ -77,7 +77,6 @@ const Footer = () => {
                         )
                     })}
                 </ul>
-
             </div>
 
             <img src="/hero/navline.webp" alt="navline" className="sm:mt-28 mx-auto w-full object-cover relative left-0 right-0 opacity-70 sm:block hidden" />

@@ -33,7 +33,7 @@ const Tokens = () => {
     return (
         <section className="w-full h-auto px-5 py-7 md:py-10 bg-bg relative pb-10 md:pb-28">
             <div className="max-w-[1400px] mx-auto w-full h-auto">
-                <h1 className="font-medium md:text-center text-transparent text-[58px] sm:text-3xl md:text-4xl font-primary  "><span className="bg-clip-text bg-gradient-to-r from-white via-[#cab8ff] to-white">Earn $LUCID?</span><span className="bg-clip-text bg-gradient-to-r from-white to-lavender"> Tokens</span></h1>
+                <h1 className="font-medium md:text-center text-transparent text-[32px] sm:text-3xl md:text-4xl font-primary  "><span className="bg-clip-text bg-gradient-to-r from-white via-[#cab8ff] to-white">Earn $LUCID?</span><span className="bg-clip-text bg-gradient-to-r from-white to-lavender"> Tokens</span></h1>
 
                 <div className="md:mt-20 mt-5 flex flex-wrap items-center justify-center gap-5">
                     {data.map((items, i) => {
