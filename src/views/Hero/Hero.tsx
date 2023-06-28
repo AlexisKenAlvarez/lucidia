@@ -1,6 +1,8 @@
 import { BsDiscord } from 'react-icons/bs'
 import { PiTelegramLogoBold } from 'react-icons/pi'
 import { SiTwitter } from 'react-icons/si'
+import MainVideo from '../../../videos/hero.mp4'
+import { useState } from 'react'
 
 const Hero = () => {
 
@@ -18,16 +20,33 @@ const Hero = () => {
             link: '',
             icon: <SiTwitter />
         },
-
     ]
 
     const audited = [
         'inter', 'rev',
     ]
 
+    const [trueLoading, setTrueLoading] = useState(true)
+
+    const handleTrue = () => {
+        setTrueLoading(false)
+    }
+
     return (
         <section className="w-full min-h-screen p-5 relative text-white flex md:items-center justify-center">
-            <img src="/hero/herobg.webp" alt="Herobg" className="w-full h-full object-cover absolute top-0 left-0" />
+            <video
+                autoPlay
+                muted
+                src={MainVideo}
+                preload={'auto'}
+                onLoadedData={handleTrue}
+                playsInline
+                className="w-full h-screen object-cover absolute top-0 left-0"
+            />
+
+            <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-prpl/60 to-black z-10"></div>
+
+            {/* <img src="/hero/herobg.webp" alt="Herobg" className="w-full h-full object-cover absolute top-0 left-0" /> */}
 
             <div className="max-w-[1400px] w-full h-auto mx-auto relative z-10 flex mt-[7rem] md:mt-[10rem] flex-col-reverse md:flex-row">
 
@@ -44,8 +63,8 @@ const Hero = () => {
 
                     <div className="flex gap-x-3 mt-10 md:flex-row flex-col gap-y-5">
                         <a href="" target='_blank' rel='noopener noreferrer' className="">
-                            <button className=" w-full md:w-[9rem] h-14 clipped2 bg-cyan relative  font-bold flex items-center justify-center scale-x-[-1]">
-                                <div className="absolute bg-cyan w-[98%] h-[91%] left-0 top-0 right-0 bottom-0 m-auto clipped2"></div>
+                            <button className=" w-full md:w-[9rem] h-14 clipped2  relative  font-bold flex items-center justify-center scale-x-[-1]">
+                                <div className="absolute bg-cyan w-full h-full left-0 top-0 right-0 bottom-0 m-auto clipped2 bg-gradient-to-bl from-white to-[#0ED4FF]"></div>
                                 <h1 className="font-secondary relative z-10 text-black font-[700] text-[12px] scale-x-[-1]">BUY $LUCID</h1>
                             </button>
                         </a>
