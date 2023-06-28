@@ -10,7 +10,6 @@ interface Children {
 const LeftRight: FunctionComponent<Children> = ({ children }) => {
 
     const settings = { triggerOnce: false, threshold: 0.5, rootMargin: `${window.innerHeight}px 0px  0px 0px` }
-
     const [ref, inView] = useInView(settings)
 
 

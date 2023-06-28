@@ -45,11 +45,6 @@ const Nav = () => {
             type: 'internal'
         },
         {
-            name: 'gameplay',
-            slug: 'gameplay',
-            type: 'internal'
-        },
-        {
             name: 'whitepaper',
             slug: 'whitepaper',
             type: 'external'
@@ -76,11 +71,6 @@ const Nav = () => {
         {
             name: 'gameplay',
             slug: 'gameplay',
-            type: 'internal'
-        },
-        {
-            name: 'academy',
-            slug: 'academy',
             type: 'internal'
         },
         {
@@ -222,7 +212,7 @@ const Nav = () => {
                             <div className="absolute bg-black w-[98%] h-[99%] left-0 top-0 right-0 bottom-0 m-auto clipped">
                                 <div className="overflow-x-hidden max-h-[100%] w-full top-0 right-0">
                                     <ul className="font-secondary font-semibold uppercase p-4 px-7 w-full text-sm text-white">
-                                        {navMobile.slice(4, 9).map((items, i) => {
+                                        {navMobile.slice(3, 9).map((items, i) => {
                                             return (
                                                 items.type === 'external' ? <a href="" target="_blank" rel="noopener noreferrer" className="w-full h-full" key={i}>
                                                     <motion.li initial={{ x: 100, opacity: 0 }} animate={navDesktopActive ? { x: 0, opacity: 1 } : {}} transition={{ duration: 0.7, delay: 0.5 * (i * 0.1), ease: [0.16, 0.77, 0.47, .97] }} className={`border-b-[1px] border-white/10 py-5 `}>
