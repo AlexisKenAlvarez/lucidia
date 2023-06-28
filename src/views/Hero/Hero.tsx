@@ -3,6 +3,7 @@ import { PiTelegramLogoBold } from 'react-icons/pi'
 import { SiTwitter } from 'react-icons/si'
 import MainVideo from '../../../videos/hero.mp4'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const Hero = () => {
 
@@ -29,11 +30,19 @@ const Hero = () => {
     const [trueLoading, setTrueLoading] = useState(true)
 
     const handleTrue = () => {
-        setTrueLoading(false)
+        setTimeout(() => {
+            setTrueLoading(false)
+        }, 1500);
     }
 
     return (
         <section className="w-full min-h-screen p-5 relative text-white flex md:items-center justify-center">
+            <div className={`w-full h-screen bg-black fixed z-30 top-0 left-0 flex flex-col items-center justify-center  transition-all ease-in-out duration-300 ${trueLoading ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} `}>
+                <div className={`animate-pulse flex justify-center items-center flex-col`}>
+                    <img src="/logo.webp" alt="Logo" className="w-24 animate-spin" />
+                    <h1 className="font-primary font-semibold text-2xl mt-10 tracking-widest">LOADING</h1>
+                </div>
+            </div>
             <video
                 autoPlay
                 muted
