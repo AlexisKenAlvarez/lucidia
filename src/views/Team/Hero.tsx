@@ -1,9 +1,12 @@
+import { BsLinkedin } from 'react-icons/bs'
+
 const Hero = () => {
 
     const members = [
         {
             name: 'Adel Khatib',
             position: 'CHIEF EXECUTIVE OFFICER',
+            link: '',
             desc: [
                 'Samsung Mena Partner (6 yrs)',
                 'Electric fleet partner with Uber (2 yrs)',
@@ -14,6 +17,7 @@ const Hero = () => {
         {
             name: 'Feras Nimer',
             position: 'CHIEF OPERATION OFFICER',
+            link: '',
             desc: [
                 'Business transformation at EY (5 yrs)',
                 'Project management (6 yrs)',
@@ -24,6 +28,7 @@ const Hero = () => {
         {
             name: 'Ahmad Assaf',
             position: 'CHIEF TECHNOLOGY OFFICER',
+            link: '',
             desc: [
                 'AI & data expert (14 yrs)',
                 'Crypto/tech enthusiast (5 yrs)',
@@ -34,6 +39,7 @@ const Hero = () => {
         {
             name: 'Den Smolonski',
             position: 'SENIOR BLOCKCHAIN DEVELOPER',
+            link: '',
             desc: [
                 'Full Stack Developer (8 yrs)',
                 'DeFi Developer',
@@ -44,6 +50,7 @@ const Hero = () => {
         {
             name: 'Jahongir Erkinov',
             position: 'SENIOR DEVELOPER',
+            link: '',
             desc: [
                 'Unreal Engine developer (6 yrs)',
                 'Unity Engine developer (4 yrs)',
@@ -54,6 +61,7 @@ const Hero = () => {
         {
             name: 'Matsushima Goro',
             position: 'BLOCKCHAIN DEVELOPER',
+            link: '',
             desc: [
                 'Blockchain expert (4 yrs)',
                 'Rust specialist (2 yrs)',
@@ -64,6 +72,7 @@ const Hero = () => {
         {
             name: 'Oskar Krzak',
             position: 'BUSINESS DEVELOPMENT MANAGER',
+            link: '',
             desc: [
                 'Product Manager (7 yrs)',
                 'Blockchain industry (6 yrs)',
@@ -73,6 +82,7 @@ const Hero = () => {
         {
             name: 'Marius Dommersnes',
             position: 'CHIEF MARKETING OFFICER',
+            link: '',
             desc: [
                 'Blockchain industry (3 yrs)',
                 'Presales & IDO (2 yrs)',
@@ -82,6 +92,7 @@ const Hero = () => {
         {
             name: 'Victoria Iskiyaeva',
             position: 'CHIEF MARKETING OFFICER',
+            link: '',
             desc: [
                 'Web3 Marketing (3 yrs)',
                 'Social Media Management (4 yrs)',
@@ -91,6 +102,7 @@ const Hero = () => {
         {
             name: 'Rula Madi',
             position: 'HEAD OF LEGAL',
+            link: '',
             desc: [
                 'Corporate & tech/IP law (20 yrs)',
                 'Senior management adviser',
@@ -100,6 +112,7 @@ const Hero = () => {
         {
             name: 'Al Rizqi',
             position: 'ASIA & CIS COMMUNITY MANAGER',
+            link: '',
             desc: [
                 'Community Manager (2 yrs)',
                 'Project Management (3 yrs)',
@@ -109,6 +122,7 @@ const Hero = () => {
         {
             name: 'Sander Kloet',
             position: 'EMEA & NA COMMUNITY MANAGER',
+            link: '',
             desc: [
                 'Community Manager (4 yrs)',
                 'Social Media Manager (4 yrs)',
@@ -126,7 +140,7 @@ const Hero = () => {
                 <img src="/token.webp" alt="token" className="absolute top-16 -right-6 z-10 w-28 md:hidden block rotate-90" />
 
                 <img src="/team/left.webp" alt="Left" className="-mb-20 xl:block hidden" />
-                <div className="flex flex-col gap-y-0 md:items-center justify-center w-fit md:mx-auto flex-shrink-0">
+                <div className="flex flex-col sm:gap-y-6 md:items-center justify-center w-fit md:mx-auto flex-shrink-0">
                     <h2 className="text-grn md:text-center text-lg font-medium uppercase text-left">lucidians</h2>
                     <h1 className="2xl:text-[72px] text-[54px] font-semibold leading-[3.5rem]">MEET OUR CRYPT EXPERTS</h1>
                     <p className="text-lg font-medium">At Lucidia we believe that the true, fully immersive metaverse is just around the corner.</p>
@@ -142,9 +156,13 @@ const Hero = () => {
                 {members.map((items, i) => {
                     return (
 
-                        <div className="w-[26rem] h-[33.9rem] bg-gradient-to-b from-gry via-gry to-prpl clipped2 scale-x-[-1] relative" key={i}>
+                        <div className="w-[26rem] h-[33.9rem] hover:from-prpl hover:via-prpl hover:to-prpl bg-gradient-to-b from-gry via-gry to-prpl clipped2 scale-x-[-1] relative" key={i}>
                             <div className="w-[99.5%] bg-black h-[99.5%] absolute clipped2  m-auto top-0 bottom-0 left-0 right-0 shadow-teamShadow">
                                 <div className="w-full h-full scale-x-[-1] relative z-10">
+                                    <a href={items.link} target="_blank" rel="noreferrer noopener" className="">
+                                        <BsLinkedin className="top-5 left-5 absolute z-10 text-2xl text-prpl" />
+                                    </a>
+
                                     <img src={`/team/${i}.webp`} alt={items.name} className="absolute w-full h-full top-0 left-0 object-cover" />
 
 
