@@ -15,14 +15,6 @@ const Partners = () => {
         'arc'
     ]
 
-    const toScale = [
-        'play',
-        'uni',
-        'pancake',
-        'arc',
-        'g2'
-    ]
-
     return (
         <section className="bg-bg-w-full h-auto py-10 sm:px-5 overflow-hidden">
             <div className="max-w-[1400px] w-full h-auto mx-auto">
