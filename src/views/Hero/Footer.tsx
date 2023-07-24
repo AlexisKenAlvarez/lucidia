@@ -90,7 +90,7 @@ const Footer = () => {
                 <ul className="flex w-fit sm:mx-auto mt-12 text-2xl sm:text-4xl sm:gap-x-7 gap-x-5">
                     {icons.map((items, i) => {
                         return (
-                            <li className="" key={i}>
+                            <li className="hover:scale-[1.1] transition-all ease-in-out duration-300 hover:text-cyan " key={i}>
                                 <a href={items.link} target="_blank" rel="noopener noreferrer" className="">
                                     {items.icon}
                                 </a>

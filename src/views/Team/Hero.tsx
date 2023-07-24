@@ -156,7 +156,7 @@ const Hero = () => {
                 {members.map((items, i) => {
                     return (
 
-                        <div className="w-[26rem] h-[33.9rem] hover:from-prpl hover:via-prpl hover:to-prpl bg-gradient-to-b from-gry via-gry to-prpl clipped2 scale-x-[-1] relative" key={i}>
+                        <div className="w-[23rem] h-[30.9rem] hover:from-prpl hover:via-prpl hover:to-prpl bg-gradient-to-b from-gry via-gry to-prpl clipped2 scale-x-[-1] relative" key={i}>
                             <div className="w-[99.5%] bg-black h-[99.5%] absolute clipped2  m-auto top-0 bottom-0 left-0 right-0 shadow-teamShadow">
                                 <div className="w-full h-full scale-x-[-1] relative z-10">
                                     <a href={items.link} target="_blank" rel="noreferrer noopener" className="">
@@ -171,7 +171,7 @@ const Hero = () => {
                                     <div className="absolute bottom-5 left-6 z-10">
                                         <h1 className="font-primary text-[25px] font-semibold">{items.name}</h1>
 
-                                        <h2 className="font-secondary font-semibold mt-[5px]">{items.position}</h2>
+                                        <h2 className="font-secondary font-semibold mt-[5px] text-neon">{items.position}</h2>
 
                                         <ul className="font-primary font-medium text-[15px] mt-5">
                                             {items.desc.map((items, i) => {

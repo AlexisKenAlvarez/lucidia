@@ -1,5 +1,5 @@
 import { MdClose } from 'react-icons/md'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { LiaTelegramPlane } from 'react-icons/lia'
 import { RxDiscordLogo } from 'react-icons/rx'
 import { TfiTwitter } from 'react-icons/tfi'
@@ -20,7 +20,7 @@ const Nav = () => {
             name: 'roadmap',
             slug: 'roadmap',
             type: 'external',
-            link:'https://drive.google.com/file/d/1j_jqFpZlgmppz9CElg4KeSnmoR4uneqp/view'
+            link: 'https://drive.google.com/file/d/1j_jqFpZlgmppz9CElg4KeSnmoR4uneqp/view'
         },
         {
             name: 'our team',
@@ -31,7 +31,7 @@ const Nav = () => {
             name: 'gameplay',
             slug: 'gameplay',
             type: 'external',
-            link:'https://share.arcware.cloud/33034e19-bac7-4d3b-910b-e2c45c2eccd8'
+            link: 'https://share.arcware.cloud/33034e19-bac7-4d3b-910b-e2c45c2eccd8'
         },
     ]
 
@@ -50,7 +50,7 @@ const Nav = () => {
         },
         {
             name: 'our team',
-            slug: 'ourteam',
+            slug: 'team',
             type: 'internal'
         },
         {
@@ -123,11 +123,36 @@ const Nav = () => {
         setNavDesktop(curr => !curr)
     }
 
+    const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+    function getCurrentDimension() {
+        return {
+            width: window.innerWidth,
+            height: window.innerHeight
+        }
+    }
+
+    useEffect(() => {
+        const updateDimension = () => {
+            setScreenSize(getCurrentDimension())
+        }
+        window.addEventListener('resize', updateDimension);
+
+        if (screenSize.width >= 768) {
+            setNav(false)
+            setNavDesktop(false)
+        }
+
+        return (() => {
+            window.removeEventListener('resize', updateDimension);
+        })
+    }, [screenSize])
+
     return (
         <>
-            <nav className={`-full sm:w-[25rem] h-screen right-0 top-0 bottom-0 bg-black z-30 fixed transition-all  ease-in-out duration-500 ${navActive ? 'translate-x-0' : 'translate-x-full'}`}>
+            <nav className={`-full sm:w-[25rem] h-screen right-0 top-0 bottom-0 bg-black z-30 fixed transition-all  ease-in-out duration-500 ${navActive ? 'translate-x-0 md:translate-x-full' : 'translate-x-full'}`}>
                 <div className="w-full h-[5rem] bg-prpl flex items-center justify-between px-4">
-                    <img src="/hero/logo.webp" alt="Logo" className="" />
+                    <img src="/hero/logo.png" alt="Logo" className="w-52 -ml-5" />
                     <MdClose className="text-cyan text-5xl cursor-pointer" onClick={handleNav} />
                 </div>
 
@@ -139,7 +164,7 @@ const Nav = () => {
                                     <motion.li initial={{ x: 100, opacity: 0 }} animate={navActive ? { x: 0, opacity: 1 } : {}} transition={{ duration: 0.7, delay: 0.5 * (i * 0.1), ease: [0.16, 0.77, 0.47, .97] }} className={`border-t-[1px] border-white/10 py-5 ${items.name === 'faq' ? 'border-b-[1px]' : ''} `}>
                                         {items.name}
                                     </motion.li>
-                                </a> : items.type === 'internal' ? <a href={`#${items.slug}`} className="w-full h-full" key={i}>
+                                </a> : items.type === 'internal' ? <a href={`${items.slug}`} className="w-full h-full" key={i}>
                                     <motion.li initial={{ x: 100, opacity: 0 }} animate={navActive ? { x: 0, opacity: 1 } : {}} transition={{ duration: 0.7, delay: 0.5 * (i * 0.1), ease: [0.16, 0.77, 0.47, .97] }} className={`border-t-[1px] border-white/10 py-5 ${items.name === 'faq' ? 'border-b-[1px]' : ''} `}>
                                         {items.name}
                                     </motion.li>
@@ -193,19 +218,19 @@ const Nav = () => {
 
                 <div className="max-w-[1400px] w-full mx-auto flex justify-between items-center mt-5">
                     <a href="/" className="">
-                        <img src="/hero/logo.webp" alt="Logo" className="" />
+                        <img src="/hero/newlogo.png" alt="Logo" className="w-52" />
                     </a>
 
                     <ul className="font-secondary font-semibold text-sm uppercase items-center gap-x-12 text-white xl:flex hidden">
                         {navList.map((items, i) => {
                             return (
-                                items.type === 'external' ? 
-                                <a href={items.link} target='_blank' rel="noopener noreferrer" className="" key={i}>
-                                    <li className="cursor-pointer" key={i}>{items.name}</li>
-                                </a> : 
-                                <a href={items.slug} className="" key={i}>
-                                <li className="cursor-pointer" key={i}>{items.name}</li>
-                            </a>
+                                items.type === 'external' ?
+                                    <a href={items.link} target='_blank' rel="noopener noreferrer" className="" key={i}>
+                                        <li className="cursor-pointer" key={i}>{items.name}</li>
+                                    </a> :
+                                    <a href={items.slug} className="" key={i}>
+                                        <li className="cursor-pointer" key={i}>{items.name}</li>
+                                    </a>
 
                             )
                         })}
@@ -222,7 +247,7 @@ const Nav = () => {
                             <div className={` transition-all ease-in-out duration-300  ${navDesktopActive ? 'bg-cyan rotate-[45deg] w-8 h-[3px] -translate-y-[6px]' : 'w-6 h-[3px] bg-white'}`}></div>
                         </button>
 
-                        <div className={`w-[16rem] h-[23rem] clipped bg-bl absolute z-10 top-[3.2rem] transition-height ease-in-out duration-300  -left-[14rem] ${navDesktopActive ? 'max-h-[23rem]' : 'max-h-0'}`}>
+                        <div className={`w-[16rem] h-[23rem] clipped bg-bl absolute z-10 top-[3.2rem] transition-height ease-in-out duration-300  -left-[14rem] ${navDesktopActive ? 'md:max-h-[23rem] max-h-[0rem]' : 'max-h-0'}`}>
                             <div className="absolute bg-black w-[98%] h-[99%] left-0 top-0 right-0 bottom-0 m-auto clipped">
                                 <div className="overflow-x-hidden max-h-[100%] w-full top-0 right-0">
                                     <ul className="font-secondary font-semibold uppercase p-4 px-7 w-full text-sm text-white">
@@ -232,7 +257,7 @@ const Nav = () => {
                                                     <motion.li initial={{ x: 100, opacity: 0 }} animate={navDesktopActive ? { x: 0, opacity: 1 } : {}} transition={{ duration: 0.7, delay: 0.5 * (i * 0.1), ease: [0.16, 0.77, 0.47, .97] }} className={`border-b-[1px] border-white/10 py-5 `}>
                                                         {items.name}
                                                     </motion.li>
-                                                </a> : items.type === 'internal' ? <a href={`#${items.slug}`} className="w-full h-full" key={i}>
+                                                </a> : items.type === 'internal' ? <a href={`#${items.slug}`} className="w-full h-full" key={i} onClick={handleNav}>
                                                     <motion.li initial={{ x: 100, opacity: 0 }} animate={navDesktopActive ? { x: 0, opacity: 1 } : {}} transition={{ duration: 0.7, delay: 0.5 * (i * 0.1), ease: [0.16, 0.77, 0.47, .97] }} className={`border-b-[1px] border-white/10 py-5`}>
                                                         {items.name}
                                                     </motion.li>

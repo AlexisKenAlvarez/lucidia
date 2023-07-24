@@ -37,18 +37,18 @@ const How = () => {
             <img src="/tokentr.webp" alt="Coin" className="w-[5rem] absolute -top-7 right-0 sm:hidden block" />
 
             <div className="w-full h-full overflow-hidden px-5">
-                <div className="max-w-[1400px] w-full mx-auto flex gap-x-32 justify-center sm:flex-row flex-col">
+                <div className="max-w-[1400px] w-full mx-auto flex lg:gap-x-32 justify-center lg:flex-row flex-col lg:items-start items-center">
 
-                    <div className="sm:w-[30%] text-white relative z-10">
-                        <h1 className="font-medium text-transparent text-2xl sm:ext-3xl md:text-4xl font-primary bg-clip-text bg-gradient-to-r from-white via-[#cab8ff] to-white sm:max-w-[12rem]">How to buy $LUCID?</h1>
-                        <p className="font-primary font-medium mt-5 max-w-[22rem]">
+                    <div className="md:w-[60%]  text-white relative z-10 text-center lg:text-left">
+                        <h1 className="font-medium text-transparent text-2xl sm:text-3xl md:text-4xl font-primary bg-clip-text bg-gradient-to-r from-white via-[#cab8ff] to-white sm:max-w-[12rem] mx-auto lg:mx-0">How to buy $LUCID?</h1>
+                        <p className="font-primary font-medium mt-5">
                             Have more questions? Send them to our <a href="https://t.me/Lucidia_io" className="text-grn underline underline-offset-4">Telegram Chat</a> and the Community Managers will answer them in a matter of minutes!
                         </p>
 
 
-                        <div className=" flex flex-col gap-y-4 mt-14 sm:mt-20">
+                        <div className=" flex flex-col gap-y-4 mt-14 sm:mt-20 ">
                             <a href="https://drive.google.com/file/d/1pT08KRpvPwnQcxwyGktETCeH8HtZi08v/view" target='_blank' rel="noopener noreferrer" className="">
-                                <button className="w-full md:w-[15rem] h-11 clipped2 bg-gradient-to-bl from-white to-[#0ED4FF] relative group font-bold flex items-center justify-center scale-x-[-1]">
+                                <button className="w-full lg:w-[15rem] h-11 clipped2 bg-gradient-to-bl from-white to-[#0ED4FF] relative group font-bold flex items-center justify-center scale-x-[-1]">
                                     <div className="absolute bg-black w-[98%] h-[93%] left-0 top-0 right-0 bottom-0 m-auto clipped2">
 
                                     </div>
@@ -61,7 +61,7 @@ const How = () => {
                             </a>
 
                             <a href="" target='_blank' rel="noopener noreferrer" className="">
-                                <button className="w-full md:w-[15rem] h-11 clipped2 bg-gradient-to-bl from-white to-[#0ED4FF] relative group font-bold flex items-center justify-center scale-x-[-1]">
+                                <button className="w-full lg:w-[15rem] h-11 clipped2 bg-gradient-to-bl from-white to-[#0ED4FF] relative group font-bold flex items-center justify-center scale-x-[-1]">
                                     <div className="absolute bg-black w-[98%] h-[93%] left-0 top-0 right-0 bottom-0 m-auto clipped2">
 
                                     </div>
@@ -74,7 +74,7 @@ const How = () => {
                             </a>
 
                             <a href="https://finance.lucidia.io/" target='_blank' rel="noopener noreferrer" className="">
-                                <button className="w-full md:w-[15rem] h-11 clipped2 bg-gradient-to-bl from-white to-[#0ED4FF] relative group font-bold flex items-center justify-center scale-x-[-1]">
+                                <button className="w-full lg:w-[15rem] h-11 clipped2 bg-gradient-to-bl from-white to-[#0ED4FF] relative group font-bold flex items-center justify-center scale-x-[-1]">
                                     <div className="absolute bg-black w-[98%] h-[93%] left-0 top-0 right-0 bottom-0 m-auto clipped2">
 
                                     </div>

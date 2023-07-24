@@ -30,7 +30,7 @@ const Hero = () => {
         },
         {
             name: 'rev',
-            link: 'https://www.revoluzion.io/audit '
+            link: 'https://www.revoluzion.io/audit'
         },
 
     ]
@@ -47,7 +47,7 @@ const Hero = () => {
         <section className="w-full min-h-screen p-5 relative text-white flex md:items-center justify-center">
             <div className={`w-full h-screen bg-black fixed z-30 top-0 left-0 flex flex-col items-center justify-center  transition-all ease-in-out duration-300 ${trueLoading ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} `}>
                 <div className={`animate-pulse flex justify-center items-center flex-col`}>
-                    <img src="/logo.webp" alt="Logo" className="w-24 animate-spin" />
+                    <img src="/logo.webp" alt="Logo" className="w-24" />
                     <h1 className="font-primary font-semibold text-2xl mt-10 tracking-widest">LOADING</h1>
                 </div>
             </div>
@@ -62,7 +62,7 @@ const Hero = () => {
                 className="w-full h-screen object-cover absolute top-0 left-0"
             />
 
-            <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-prpl/60 to-black z-10"></div>
+            <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-prpl/50 to-black z-10"></div>
 
             {/* <img src="/hero/herobg.webp" alt="Herobg" className="w-full h-full object-cover absolute top-0 left-0" /> */}
 
@@ -80,7 +80,7 @@ const Hero = () => {
                     </div>
 
                     <div className="flex gap-x-3 mt-10 md:flex-row flex-col gap-y-5">
-                        <a href="$LUCID - https://finance.lucidia.io/" target='_blank' rel='noopener noreferrer' className="">
+                        <a href="https://finance.lucidia.io/" target='_blank' rel='noopener noreferrer' className="">
                             <button className=" w-full md:w-[9rem] h-14 clipped2  relative  font-bold flex items-center justify-center scale-x-[-1]">
                                 <div className="absolute bg-cyan w-full h-full left-0 top-0 right-0 bottom-0 m-auto clipped2 bg-gradient-to-bl from-white to-[#0ED4FF]"></div>
                                 <h1 className="font-secondary relative z-10 text-black font-[700] text-[12px] scale-x-[-1]">BUY $LUCID</h1>
@@ -117,7 +117,7 @@ const Hero = () => {
                             <ul className="flex items-center gap-x-7 text-2xl mt-4">
                                 {audited.map((items, i) => {
                                     return (
-                                        <a href="" target="_blank" rel="noopener noreferrer" className="">
+                                        <a href={items.link} target="_blank" rel="noopener noreferrer" className="" key={i}>
                                             <img src={`/hero/${items.name}.webp`} alt={items.name} className="" key={i} />
                                         </a>
                                     )
